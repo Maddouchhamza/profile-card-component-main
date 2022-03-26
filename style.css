@@ -5,40 +5,45 @@ body{
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
+    background-origin: ;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg); 
+    background-repeat: no-repeat, no-repeat;
+    background-position: -270px -480px, 650px 420px;   
 }
 section{
+    font-family: "Kumbh Sans", sans-serif;
+    text-align: center;
     background-color: white;
-    width: fit-content;
+    width: 320px;
     height: 370px;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    font-family: "Kumbh Sans", sans-serif;
+    box-shadow: hsl(185, 75%, 31%) 10px 10px 30px;
 }
-section>img{
+.photo{
+    position: relative;
+}
+#card{
     width: 320px;
     height: 140px;
     border-radius: 13px 13px 0px 0px;
 }
-.photo{
-    width: fit-content;
-    border-radius: 55px;
+#user-photo{
     position: absolute;
-    top: 85px;
-}
-.photo>img{
+    top: 87px;
+    left: 110px;
     border-radius: 55px;
     border: solid white;
     border-width: 5px;
 }
+
 .info{
-    padding-top: 50px;
-    text-align: center;
-    line-height: 25px;
     color: hsl(229, 23%, 23%);
+    padding-top: 45px;
+    line-height: 28px;
     font-weight: 700;
     font-size: 18px;
 }
@@ -52,12 +57,13 @@ section>img{
     font-size: 14px;
 }
 .statistics{
-    text-align: center;
+    width: 280px;
     display: flex;
     justify-content: space-around;
-    width: 320px;
     padding-bottom: 25px;
-    padding-top: 23px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-top: solid hsl(0, 0%, 89%);
     border-width: 1px;
 }
@@ -74,4 +80,11 @@ section>img{
     font-weight: 400;
     font-size: 10px;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 375px){
+    body{
+        background-size: 150%, 150%;
+        background-position: -320px -330px, 180px 380px;   
+    }
 }
